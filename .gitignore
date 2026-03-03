@@ -1,6 +1,5 @@
 # Python
-__pycache__/
-*.py[cod]
+__pycache_*.py[cod]
 *$py.class
 *.so
 .Python
@@ -27,3 +26,6 @@ Thumbs.db
 
 # Claude
 .claude/
+
+# Other
+项目无关/
