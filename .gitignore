@@ -29,3 +29,6 @@ Thumbs.db
 
 # Other
 项目无关/
+
+# DingTalk Bot config
+dingtalk_bot/config.json
