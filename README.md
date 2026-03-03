@@ -6,11 +6,15 @@
 
 ```
 fund_prediction/
-├── fetch_fund_data/          # 基金数据获取模块
-│   └── fetch_fund_data.py    # 获取基金近 1 年收益走势
-├── institution_funds/        # 机构持有基金分析模块
+├── dingtalk_bot/           # 钉钉机器人消息通知模块
+│   ├── dingtalk_bot.py     # 钉钉机器人主程序
+│   ├── config.json         # 配置文件（不提交到版本控制）
+│   └── config.json.example # 配置文件模板
+├── fetch_fund_data/        # 基金数据获取模块
+│   └── fetch_fund_data.py  # 获取基金近 1 年收益走势
+├── institution_funds/      # 机构持有基金分析模块
 │   └── find_institution_funds.py  # 查找机构持有占比高的基金
-├── output/                   # 数据输出目录
+├── output/                 # 数据输出目录
 └── README.md
 ```
 
