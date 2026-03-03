@@ -48,6 +48,38 @@ target_count = 100  # 找到 100 只后停止
 
 **输出：** `output/institution_funds_{timestamp}.csv`
 
+### 3. 钉钉机器人消息通知 (`dingtalk_bot/`)
+
+发送消息到钉钉群聊的机器人工具：
+- 支持文本消息
+- 支持 Markdown 消息
+- 支持@所有人或指定用户
+- 使用配置文件管理敏感凭证
+
+**配置方法：**
+
+1. 复制配置示例文件：
+```bash
+cp dingtalk_bot/config.json.example dingtalk_bot/config.json
+```
+
+2. 编辑 `dingtalk_bot/config.json`，填入你的机器人凭证：
+```json
+{
+    "access_token": "你的 access_token",
+    "secret": "你的加签密钥"
+}
+```
+
+3. 运行测试：
+```bash
+python dingtalk_bot/dingtalk_bot.py
+```
+
+**注意：** `config.json` 已添加到 `.gitignore`，不会被提交到版本控制系统。
+
+**输出：** 钉钉群聊消息
+
 ## 依赖
 
 - Python 3.x
