@@ -1,0 +1,132 @@
+{
+  "fund_info": {
+    "name": "招商中证白酒指数(LOF)A",
+    "code": "161725",
+    "return_1y": "-23.93%",
+    "return_6m": "-20.25%",
+    "return_3m": "-11.34%",
+    "return_1m": "-6.8%"
+  },
+  "holdings": [
+    {
+      "code": "600519",
+      "name": "贵州茅台",
+      "price": 1407.24,
+      "change": 7.240000000000009,
+      "change_pct": 0.5171428571428578,
+      "prev_close": 1400.0,
+      "volume": 96825,
+      "turnover": 13631929446.0,
+      "market": "SH",
+      "fund_code_format": "1.600519"
+    },
+    {
+      "code": "600809",
+      "name": "山西汾酒",
+      "price": 139.5,
+      "change": 0.30000000000001137,
+      "change_pct": 0.21551724137931855,
+      "prev_close": 139.2,
+      "volume": 41139,
+      "turnover": 572807766.0,
+      "market": "SH",
+      "fund_code_format": "1.600809"
+    },
+    {
+      "code": "000858",
+      "name": "五 粮 液",
+      "price": 101.86,
+      "change": 0.35999999999999943,
+      "change_pct": 0.3546798029556645,
+      "prev_close": 101.5,
+      "volume": 167432,
+      "turnover": 1704502562.25,
+      "market": "SZ",
+      "fund_code_format": "0.000858"
+    },
+    {
+      "code": "000568",
+      "name": "泸州老窖",
+      "price": 101.2,
+      "change": 0.20000000000000284,
+      "change_pct": 0.19801980198020083,
+      "prev_close": 101.0,
+      "volume": 92560,
+      "turnover": 935095081.79,
+      "market": "SZ",
+      "fund_code_format": "0.000568"
+    },
+    {
+      "code": "002304",
+      "name": "洋河股份",
+      "price": 49.74,
+      "change": -0.1599999999999966,
+      "change_pct": -0.3206412825651235,
+      "prev_close": 49.9,
+      "volume": 44899,
+      "turnover": 223291085.94,
+      "market": "SZ",
+      "fund_code_format": "0.002304"
+    },
+    {
+      "code": "000596",
+      "name": "古井贡酒",
+      "price": 105.3,
+      "change": -0.1599999999999966,
+      "change_pct": -0.15171629053669314,
+      "prev_close": 105.46,
+      "volume": 22408,
+      "turnover": 235754512.95,
+      "market": "SZ",
+      "fund_code_format": "0.000596"
+    },
+    {
+      "code": "603369",
+      "name": "今世缘",
+      "price": 25.71,
+      "change": -0.41000000000000014,
+      "change_pct": -1.5696784073506898,
+      "prev_close": 26.12,
+      "volume": 128421,
+      "turnover": 330538579.0,
+      "market": "SH",
+      "fund_code_format": "1.603369"
+    },
+    {
+      "code": "603198",
+      "name": "迎驾贡酒",
+      "price": 34.57,
+      "change": -0.7299999999999969,
+      "change_pct": -2.0679886685552322,
+      "prev_close": 35.3,
+      "volume": 60765,
+      "turnover": 209365634.0,
+      "market": "SH",
+      "fund_code_format": "1.603198"
+    },
+    {
+      "code": "600702",
+      "name": "舍得酒业",
+      "price": 45.96,
+      "change": -0.509999999999998,
+      "change_pct": -1.0974822466107124,
+      "prev_close": 46.47,
+      "volume": 53983,
+      "turnover": 248285138.0,
+      "market": "SH",
+      "fund_code_format": "1.600702"
+    },
+    {
+      "code": "603589",
+      "name": "口子窖",
+      "price": 24.73,
+      "change": -0.21999999999999886,
+      "change_pct": -0.8817635270541037,
+      "prev_close": 24.95,
+      "volume": 29798,
+      "turnover": 73567675.0,
+      "market": "SH",
+      "fund_code_format": "1.603589"
+    }
+  ]
+}

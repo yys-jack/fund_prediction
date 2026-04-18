@@ -9,6 +9,7 @@
 
 import json
 import csv
+import re
 from collections import defaultdict
 from typing import List, Dict, Optional
 from datetime import datetime
@@ -176,6 +177,25 @@ class PopularStocksFinder:
 
         for i, stock in enumerate(stock_list):
             stock_code = stock['stock_code']
+            
+            # 过滤非 A 股代码（美股、港股、债券等）
+            # A 股代码格式：60xxxx, 000xxx, 002xxx, 300xxx, 688xxx(科创板)
+            if not re.match(r'^(60|000|002|300|688)\d{4}$', stock_code):
+                # 非 A 股，添加基本信息但不获取行情
+                self.stock_details.append({
+                    '序号': i + 1,
+                    '股票代码': stock_code,
+                    '股票名称': 'Unknown (非 A 股)',
+                    '现价': 0,
+                    '涨跌额': 0,
+                    '涨幅%': 0,
+                    '成交量 (手)': 0,
+                    '成交额 (元)': 0,
+                    '持有基金数': stock['fund_count'],
+                    '持有基金代码': ','.join(stock['fund_codes'][:5]),
+                })
+                continue
+            
             # 判断市场
             market = '1' if stock_code.startswith('6') else '0'
             secid = f"{market}.{stock_code}"

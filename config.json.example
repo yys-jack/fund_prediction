@@ -1,0 +1,8 @@
+{
+    "fund_code": "161725",
+    "fund_codes": ["161725"],
+    "institution_fund": {
+        "threshold": 30.0,
+        "target_count": 100
+    }
+}
