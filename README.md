@@ -31,7 +31,6 @@ fund_prediction/
 │   └── find_high_return_funds.py # 高收益基金筛选 ⭐ 新增
 ├── tests/                    # 测试目录
 │   └── test_core.py          # 核心模块测试
-├── get_fund_holdings.py      # 实时持仓查询（兼容旧版）
 ├── config.json               # 全局配置文件
 ├── config.json.example       # 配置模板
 ├── output/                   # 数据输出目录
@@ -100,9 +99,6 @@ python scripts/fund_selection_workflow.py --step 2 --fund-pool output/fund_pool_
 
 # 自定义热门股票数量
 python scripts/fund_selection_workflow.py --top-stocks 30
-
-# 实时持仓查询（兼容旧版）
-python get_fund_holdings.py
 ```
 
 ## 功能模块
