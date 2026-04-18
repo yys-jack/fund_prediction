@@ -10,8 +10,13 @@
 import argparse
 import sys
 import csv
+from pathlib import Path
 from datetime import datetime
 from typing import List, Dict
+
+# 添加项目根目录到 Python 路径
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
 from modules.institution_analysis import search_institution_funds
 from modules.high_return_funds import find_high_return_funds
@@ -40,9 +45,9 @@ def merge_funds(institutions: List[Dict], high_returns: List[Dict]) -> List[Dict
                 '基金代码': code,
                 '基金名称': fund.get('基金名称', ''),
                 '来源标签': '机构',
-                '近 1 年收益率': fund.get('近 1 年收益率', 'N/A'),
-                '机构持有占比': fund.get('机构持有占比', 'N/A'),
-                '基金规模 (亿元)': fund.get('基金规模', 'N/A'),
+                '近 1 年收益率': 'N/A',
+                '机构持有占比': f"{fund.get('机构持有占比 (%)', 'N/A')}%" if isinstance(fund.get('机构持有占比 (%)'), (int, float)) else fund.get('机构持有占比 (%)', 'N/A'),
+                '基金规模 (亿元)': fund.get('基金规模 (亿元)', 'N/A'),
             }
 
     # 添加高收益基金，处理重复
@@ -52,12 +57,14 @@ def merge_funds(institutions: List[Dict], high_returns: List[Dict]) -> List[Dict
             if code in fund_dict:
                 # 重复基金，更新标签
                 fund_dict[code]['来源标签'] = '重复'
+                # 更新收益率（高收益基金有收益率数据）
+                fund_dict[code]['近 1 年收益率'] = f"{fund.get('近 1 年收益率 (%)', 'N/A')}%" if isinstance(fund.get('近 1 年收益率 (%)'), (int, float)) else fund.get('近 1 年收益率 (%)', 'N/A')
             else:
                 fund_dict[code] = {
                     '基金代码': code,
                     '基金名称': fund.get('基金名称', ''),
                     '来源标签': '高收益',
-                    '近 1 年收益率': fund.get('近 1 年收益率', 'N/A'),
+                    '近 1 年收益率': f"{fund.get('近 1 年收益率 (%)', 'N/A')}%" if isinstance(fund.get('近 1 年收益率 (%)'), (int, float)) else fund.get('近 1 年收益率 (%)', 'N/A'),
                     '机构持有占比': 'N/A',
                     '基金规模 (亿元)': fund.get('基金规模', 'N/A'),
                 }
